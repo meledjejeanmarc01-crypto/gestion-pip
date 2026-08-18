@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240">
+  <rect width="400" height="240" fill="#fff7e6"/>
+  <polygon points="200,50 320,110 80,110" fill="#f77f00"/>
+  <rect x="100" y="110" width="200" height="100" fill="#ffffff" stroke="#f77f00" stroke-width="4"/>
+  <rect x="140" y="150" width="40" height="60" fill="#0b3d2e"/>
+  <rect x="220" y="140" width="30" height="30" fill="#009e60"/>
+  <text x="200" y="225" text-anchor="middle" font-family="Arial" font-size="14" fill="#0b3d2e">Éducation</text>
+</svg>

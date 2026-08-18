@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240">
+  <rect width="400" height="240" fill="#eaf6ff"/>
+  <rect x="80" y="60" width="240" height="150" fill="#ffffff" stroke="#0d6efd" stroke-width="4"/>
+  <rect x="150" y="110" width="100" height="100" fill="#0d6efd" opacity="0.15"/>
+  <rect x="185" y="90" width="30" height="80" fill="#dc3545"/>
+  <rect x="160" y="115" width="80" height="30" fill="#dc3545"/>
+  <text x="200" y="225" text-anchor="middle" font-family="Arial" font-size="14" fill="#0b3d2e">Santé</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240">
+  <rect width="400" height="240" fill="#fff9db"/>
+  <rect x="70" y="60" width="14" height="150" fill="#495057"/>
+  <rect x="200" y="40" width="14" height="170" fill="#495057"/>
+  <rect x="330" y="70" width="14" height="140" fill="#495057"/>
+  <polyline points="84,90 200,100 214,150 344,120" stroke="#495057" stroke-width="4" fill="none"/>
+  <polygon points="190,120 210,120 195,160 215,160 175,210 185,165 165,165" fill="#f2c94c"/>
+  <text x="200" y="225" text-anchor="middle" font-family="Arial" font-size="14" fill="#0b3d2e">Énergie</text>
+</svg>

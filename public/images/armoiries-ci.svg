@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <circle cx="80" cy="80" r="76" fill="#ffffff" stroke="#0b3d2e" stroke-width="4"/>
+  <path d="M80 14 L146 80 L80 146 L14 80 Z" fill="#f77f00" opacity="0.15"/>
+  <text x="80" y="70" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#0b3d2e" font-weight="bold">RÉPUBLIQUE DE</text>
+  <text x="80" y="90" text-anchor="middle" font-family="Georgia, serif" font-size="17" fill="#0b3d2e" font-weight="bold">CÔTE D'IVOIRE</text>
+  <text x="80" y="112" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#009e60" font-style="italic">Union - Discipline - Travail</text>
+  <!-- REMPLACEZ CE FICHIER PAR LE VÉRITABLE BLASON OFFICIEL (armoiries-ci.svg / .png) -->
+</svg>

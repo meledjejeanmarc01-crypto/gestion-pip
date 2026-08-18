@@ -1,0 +1,22 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@popperjs/core": "^2.11.8",
+        "autoprefixer": "^10.4.20",
+        "laravel-vite-plugin": "^1.0.5",
+        "vite": "^5.4.10"
+    },
+    "dependencies": {
+        "bootstrap": "^5.3.3",
+        "bootstrap-icons": "^1.11.3",
+        "chart.js": "^4.4.4",
+        "laravel-echo": "^1.16.1",
+        "leaflet": "^1.9.4",
+        "pusher-js": "^8.4.0-rc2"
+    }
+}

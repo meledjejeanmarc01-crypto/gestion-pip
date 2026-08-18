@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240">
+  <rect width="400" height="240" fill="#f1f3f5"/>
+  <rect x="60" y="120" width="280" height="60" rx="10" fill="#fa5252"/>
+  <rect x="80" y="90" width="240" height="40" rx="8" fill="#fa5252"/>
+  <circle cx="110" cy="190" r="18" fill="#212529"/>
+  <circle cx="290" cy="190" r="18" fill="#212529"/>
+  <text x="200" y="225" text-anchor="middle" font-family="Arial" font-size="14" fill="#0b3d2e">Transports</text>
+</svg>

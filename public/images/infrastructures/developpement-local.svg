@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240">
+  <rect width="400" height="240" fill="#f3f0ff"/>
+  <rect x="90" y="110" width="70" height="100" fill="#845ef7"/>
+  <rect x="180" y="80" width="70" height="130" fill="#5f3dc4"/>
+  <rect x="270" y="130" width="70" height="80" fill="#845ef7"/>
+  <text x="200" y="225" text-anchor="middle" font-family="Arial" font-size="14" fill="#0b3d2e">Développement local</text>
+</svg>

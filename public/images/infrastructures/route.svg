@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240">
+  <rect width="400" height="240" fill="#bfe3ff"/>
+  <rect y="150" width="400" height="90" fill="#7a7a7a"/>
+  <rect y="150" width="400" height="90" fill="#5a5a5a" opacity="0.3"/>
+  <g stroke="#fff" stroke-width="6" stroke-dasharray="24 18">
+    <line x1="0" y1="195" x2="400" y2="195"/>
+  </g>
+  <rect x="0" y="120" width="400" height="30" fill="#3a7d44"/>
+  <circle cx="60" cy="60" r="26" fill="#ffd43b"/>
+  <text x="200" y="225" text-anchor="middle" font-family="Arial" font-size="14" fill="#fff">Infrastructures routières</text>
+</svg>

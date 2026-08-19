@@ -1,12 +1,12 @@
-# SIGPIP — Système de Gestion et de Suivi des Projets d’Investissement Public
+# SGSPIP — Système de Gestion et de Suivi des Projets d’Investissement Public
 
 ## 📌 Présentation
 
-**SIGPIP** est une application web destinée à la **gestion, au suivi et au pilotage des projets d’investissement public en Côte d’Ivoire**.
+**SGSPIP** est une application web destinée à la **gestion, au suivi et au pilotage des projets d’investissement public en Côte d’Ivoire**.
 
 L’application permet de centraliser les informations relatives aux projets d’investissement public, depuis leur planification jusqu’à leur clôture. Elle facilite le suivi de l’avancement physique, des budgets, des décaissements, des dépenses, des tâches et des indicateurs de performance.
 
-SIGPIP a pour objectif d’améliorer la **centralisation des données**, le **suivi des projets**, le **reporting** et l’aide à la **prise de décision**.
+SGSPIP a pour objectif d’améliorer la **centralisation des données**, le **suivi des projets**, le **reporting** et l’aide à la **prise de décision**.
 
 ---
 
@@ -162,7 +162,7 @@ Une structure peut être associée à :
 
 ### 🤝 Secteurs et bailleurs
 
-SIGPIP permet également de gérer :
+SGSPIP permet également de gérer :
 
 * Les secteurs d'intervention.
 * Les bailleurs de fonds.
@@ -178,7 +178,7 @@ Les documents liés aux projets peuvent être centralisés dans l'application af
 
 ## 🗄️ Structure de la base de données
 
-La base de données utilisée par SIGPIP est **MySQL**.
+La base de données utilisée par SGSPIP est **MySQL**.
 
 Les principales tables sont :
 
@@ -262,7 +262,7 @@ Projet
 
 ## 📋 Prérequis
 
-Avant d'installer SIGPIP, assurez-vous d'avoir installé :
+Avant d'installer SGSPIP, assurez-vous d'avoir installé :
 
 * PHP 8.3 ou supérieur
 * Composer
@@ -501,7 +501,7 @@ Clôture du projet
 
 ## 📊 Reporting
 
-SIGPIP facilite le reporting grâce à la centralisation des informations relatives aux projets.
+SGSPIP facilite le reporting grâce à la centralisation des informations relatives aux projets.
 
 Les responsables peuvent notamment consulter :
 
@@ -585,7 +585,7 @@ GitHub :
 
 Projet :
 
-**SIGPIP — Gestion et Suivi des Projets d'Investissement Public**
+**SGSPIP — Système Gestion et Suivi des Projets d'Investissement Public**
 
 ---
 

@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Connexion · Projet d'Investissement Public · Côte d'Ivoire</title>
+    <title>Connexion · Gestion de SGPIP · Côte d'Ivoire</title>
+    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
         .login-bg {

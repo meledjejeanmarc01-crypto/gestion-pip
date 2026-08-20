@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('titre', "Projet d'Investissement Public") · République de Côte d'Ivoire</title>
+    <title>@yield('titre', 'Gestion de SGPIP') · République de Côte d'Ivoire</title>
+    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -34,6 +35,16 @@
                 <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('carte.*') ? 'active' : '' }}" href="{{ route('carte.index') }}">
                         <i class="bi bi-geo-alt me-2"></i> Carte du territoire
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->routeIs('bailleurs.*') ? 'active' : '' }}" href="{{ route('bailleurs.index') }}">
+                        <i class="bi bi-building me-2"></i> Bailleurs
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->routeIs('rapports.*') ? 'active' : '' }}" href="{{ route('rapports.index') }}">
+                        <i class="bi bi-file-earmark-bar-graph me-2"></i> Rapports
                     </a>
                 </li>
             </ul>

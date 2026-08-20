@@ -29,8 +29,7 @@ class DashboardController extends Controller
         $avancementMoyen = round((clone $projets)->avg('avancement_physique') ?? 0, 1);
 
         $repartitionParRegion = Region::withCount('projets')
-           ->having('projets_count', '>', 0)
-           ->get(['id', 'nom']);
+            ->having('projets_count', '>', 0)->get(['id', 'nom']);
 
         $repartitionParSecteur = \App\Models\Secteur::withCount('projets')->get(['id', 'nom']);
 

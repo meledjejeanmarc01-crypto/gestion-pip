@@ -24,15 +24,18 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
-      User::updateOrCreate(
-    ['email' => 'meledjejeanmarc01@gmail.com'],
-    [
-        'name' => 'Jean Marc Meledje',
-        'password' => 'Jeanmarc110',
-        'role' => 'admin_national',
-        'structure_id' => $ministere->id,
-        'actif' => true,
-    ]
-);
+        User::firstOrCreate(
+            ['email' => 'admin@plan.gouv.ci'],
+            [
+                'name' => 'Administrateur National',
+                'password' => bcrypt('MotDePasse@2026'),
+                'role' => 'admin_national',
+                'structure_id' => $ministere->id,
+            ]
+        );
+
+        $this->call([
+            ProjetSeeder::class,
+        ]);
     }
 }

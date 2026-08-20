@@ -69,7 +69,20 @@
                             <div class="progress-bar" style="width: {{ $projet->avancement_physique }}%"></div>
                         </div>
                     </td>
-                    <td><a href="{{ route('projets.show', $projet) }}" class="btn btn-sm btn-outline-success">Détail</a></td>
+                    <td>
+                        <div class="d-flex gap-1">
+                            <a href="{{ route('projets.show', $projet) }}" class="btn btn-sm btn-outline-success">Détail</a>
+                            <a href="{{ route('projets.edit', $projet) }}" class="btn btn-sm btn-outline-primary">Modifier</a>
+                            @if (auth()->user()->hasRole(['admin_national', 'responsable_national']))
+                            <form method="POST" action="{{ route('projets.destroy', $projet) }}"
+                                  onsubmit="return confirm('Supprimer définitivement le projet « {{ $projet->nom }} » ainsi que tous ses budgets, décaissements, dépenses et tâches ?');">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-sm btn-outline-danger">Supprimer</button>
+                            </form>
+                            @endif
+                        </div>
+                    </td>
                 </tr>
             @empty
                 <tr><td colspan="8" class="text-center text-muted py-4">Aucun projet enregistré pour ces critères.</td></tr>

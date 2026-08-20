@@ -104,4 +104,12 @@ class ProjetController extends Controller
 
         return redirect()->route('projets.show', $projet)->with('succes', 'Projet mis à jour.');
     }
+
+    public function destroy(Projet $projet)
+    {
+        $nom = $projet->nom;
+        $projet->delete(); // supprime aussi budgets, décaissements, dépenses, tâches, indicateurs, documents (cascade)
+
+        return redirect()->route('projets.index')->with('succes', "Le projet « {$nom} » a été supprimé.");
+    }
 }

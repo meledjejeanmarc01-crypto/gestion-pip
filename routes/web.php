@@ -8,7 +8,12 @@ use App\Http\Controllers\DecaissementController;
 use App\Http\Controllers\DepenseController;
 use App\Http\Controllers\ProjetController;
 use App\Http\Controllers\TacheController;
+use App\Http\Controllers\BailleurController;
+use App\Http\Controllers\IndicateurController;
+use App\Http\Controllers\DocumentController;
+use App\Http\Controllers\RapportController;
 use Illuminate\Support\Facades\Route;
+
 
 // ----- Authentification -----
 Route::middleware('guest')->group(function () {
@@ -29,6 +34,14 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('projets', ProjetController::class)
         ->except(['destroy']);
+     
+    Route::resource('bailleurs', BailleurController::class);
+
+    Route::resource('indicateurs', IndicateurController::class);
+
+    Route::resource('documents', DocumentController::class);
+
+    Route::resource('rapports', RapportController::class);
 
     Route::post('/projets/{projet}/budgets', [BudgetController::class, 'store'])
         ->middleware('role:admin_national,agent_financier,responsable_projet')

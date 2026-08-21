@@ -378,7 +378,7 @@ php artisan migrate
 php artisan db:seed
 ```
 
-Les Seeders permettent notamment d'initialiser les données géographiques et les secteurs/bailleurs.
+Les Seeders initialisent l'ensemble des données de démonstration : découpage géographique, secteurs, bailleurs de fonds, structures publiques, comptes utilisateurs et un portefeuille de 16 projets réalistes (avec budgets, décaissements, dépenses, tâches, indicateurs, documents et rapports associés) répartis sur plusieurs régions du pays.
 
 ---
 
@@ -414,17 +414,11 @@ http://127.0.0.1:8000
 
 ---
 
-## 🔑 Compte administrateur
+## 🔑 Comptes de démonstration
 
-Un compte administrateur peut être créé dans la base de données ou via un Seeder.
+Le compte administrateur national est créé par `DatabaseSeeder` (identifiants définis par son propriétaire, non publiés ici pour des raisons de sécurité).
 
-Exemple de rôle administrateur :
-
-```text
-admin_national
-```
-
-Pour des raisons de sécurité, **aucun mot de passe réel ne doit être enregistré dans ce README**.
+`PersonnelSeeder` crée en complément dix comptes métier illustrant les différents rôles applicatifs (responsable régional, agent financier, agent de suivi-évaluation, responsable de projet, décideur, etc.), tous rattachés à une structure et, le cas échéant, à une région. Leurs adresses suivent le format `prenom.nom@plan.gouv.ci` et partagent un mot de passe de démonstration défini dans `database/seeders/PersonnelSeeder.php` — à modifier avant tout déploiement réel.
 
 ---
 

@@ -35,8 +35,32 @@ body {
 
 .card-kpi {
     border: none;
-    border-radius: 1rem;
+    border-top: 3px solid var(--ci-orange);
+    border-radius: .75rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, .06);
+    transition: box-shadow .15s ease;
+}
+.card-kpi:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .09);
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-size: .72rem;
+    font-weight: 600;
+    color: var(--ci-vert);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 158, 96, .05);
+}
+
+.app-footer {
+    font-size: .78rem;
+    color: #6c757d;
+    border-top: 1px solid #e5e7eb;
+    padding: .9rem 1.5rem;
 }
 
 .login-card {
@@ -46,6 +70,11 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
 }
 
+[class^="badge-statut-"] {
+    text-transform: capitalize;
+    font-weight: 500;
+    padding: .35em .65em;
+}
 .badge-statut-en_cours { background: #0d6efd; }
 .badge-statut-termine { background: #198754; }
 .badge-statut-en_retard { background: #dc3545; }

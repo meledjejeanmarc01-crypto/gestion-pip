@@ -2,28 +2,38 @@
 @section('titre', 'Tableau de bord national')
 
 @section('contenu')
+<div class="mb-4">
+    <p class="text-muted mb-0">
+        Portefeuille national des projets d'investissement public — situation consolidée, toutes structures et régions confondues.
+    </p>
+</div>
+
 <div class="row g-3 mb-4">
     <div class="col-md-3">
         <div class="card card-kpi p-3">
-            <div class="text-muted small">Projets enregistrés</div>
+            <div class="eyebrow">Portefeuille</div>
+            <div class="text-muted small">Projets suivis</div>
             <div class="fs-3 fw-bold" id="kpi-total">{{ $totalProjets }}</div>
         </div>
     </div>
     <div class="col-md-3">
         <div class="card card-kpi p-3">
-            <div class="text-muted small">En cours / Terminés</div>
+            <div class="eyebrow">Exécution</div>
+            <div class="text-muted small">En cours / Achevés</div>
             <div class="fs-3 fw-bold"><span id="kpi-en-cours">{{ $enCours }}</span> / <span id="kpi-termines">{{ $termines }}</span></div>
         </div>
     </div>
     <div class="col-md-3">
         <div class="card card-kpi p-3">
-            <div class="text-muted small">Projets en retard</div>
+            <div class="eyebrow">Vigilance</div>
+            <div class="text-muted small">Projets accusant un retard</div>
             <div class="fs-3 fw-bold text-danger" id="kpi-en-retard">{{ $enRetard }}</div>
         </div>
     </div>
     <div class="col-md-3">
         <div class="card card-kpi p-3">
-            <div class="text-muted small">Avancement moyen</div>
+            <div class="eyebrow">Physique</div>
+            <div class="text-muted small">Taux d'avancement moyen</div>
             <div class="fs-3 fw-bold" id="kpi-avancement">{{ $avancementMoyen }}%</div>
         </div>
     </div>
@@ -32,26 +42,27 @@
 <div class="row g-3 mb-4">
     <div class="col-md-4">
         <div class="card card-kpi p-3">
-            <div class="text-muted small">Budget total prévisionnel</div>
+            <div class="text-muted small">Coût prévisionnel cumulé</div>
             <div class="fs-4 fw-bold" id="kpi-budget">{{ number_format($budgetTotal, 0, ',', ' ') }} FCFA</div>
         </div>
     </div>
     <div class="col-md-4">
         <div class="card card-kpi p-3">
-            <div class="text-muted small">Montant total décaissé</div>
+            <div class="text-muted small">Décaissements cumulés</div>
             <div class="fs-4 fw-bold text-success" id="kpi-decaisse">{{ number_format($totalDecaisse, 0, ',', ' ') }} FCFA</div>
         </div>
     </div>
     <div class="col-md-4">
         <div class="card card-kpi p-3">
-            <div class="text-muted small">Montant total dépensé</div>
+            <div class="text-muted small">Dépenses exécutées</div>
             <div class="fs-4 fw-bold text-warning" id="kpi-depense">{{ number_format($totalDepense, 0, ',', ' ') }} FCFA</div>
         </div>
     </div>
 </div>
 
 <div class="card card-kpi p-3 mb-4">
-    <h2 class="h6 mb-3">Secteurs d'intervention</h2>
+    <h2 class="h6 mb-1">Secteurs d'intervention</h2>
+    <p class="text-muted small mb-3">Domaines couverts par le Plan National de Développement.</p>
     <div class="row row-cols-2 row-cols-md-4 g-3 text-center">
         <div class="col"><img src="{{ asset('images/infrastructures/route.svg') }}" class="img-fluid rounded" alt="Infrastructures"><div class="small mt-1">Infrastructures</div></div>
         <div class="col"><img src="{{ asset('images/infrastructures/sante.svg') }}" class="img-fluid rounded" alt="Santé"><div class="small mt-1">Santé</div></div>
@@ -67,13 +78,15 @@
 <div class="row g-3 mb-4">
     <div class="col-md-6">
         <div class="card card-kpi p-3">
-            <h2 class="h6">Répartition des projets par région</h2>
+            <h2 class="h6 mb-1">Répartition régionale du portefeuille</h2>
+            <p class="text-muted small mb-2">Nombre de projets par région d'intervention.</p>
             <canvas id="graphRegions" height="220"></canvas>
         </div>
     </div>
     <div class="col-md-6">
         <div class="card card-kpi p-3">
-            <h2 class="h6">Répartition des projets par secteur</h2>
+            <h2 class="h6 mb-1">Répartition sectorielle du portefeuille</h2>
+            <p class="text-muted small mb-2">Nombre de projets par secteur d'intervention.</p>
             <canvas id="graphSecteurs" height="220"></canvas>
         </div>
     </div>
@@ -81,15 +94,18 @@
 
 <div class="card card-kpi p-3">
     <div class="d-flex justify-content-between align-items-center mb-2">
-        <h2 class="h6 mb-0">Projets récents <span class="pastille-live ms-2"><span class="point"></span> mise à jour en direct</span></h2>
+        <div>
+            <h2 class="h6 mb-0">Derniers projets inscrits <span class="pastille-live ms-2"><span class="point"></span> mise à jour en direct</span></h2>
+            <p class="text-muted small mb-0">Projets les plus récemment enregistrés dans le système.</p>
+        </div>
         <a href="{{ route('projets.index') }}" class="small">Voir tous les projets →</a>
     </div>
-    <table class="table table-sm align-middle mb-0">
+    <table class="table table-hover table-sm align-middle mb-0">
         <thead>
             <tr><th>Code</th><th>Projet</th><th>Région</th><th>Statut</th><th>Avancement</th></tr>
         </thead>
         <tbody id="table-projets-recents">
-            @foreach ($projetsRecents as $projet)
+            @forelse ($projetsRecents as $projet)
                 <tr data-projet-id="{{ $projet->id }}">
                     <td>{{ $projet->code }}</td>
                     <td>{{ $projet->nom }}</td>
@@ -101,7 +117,9 @@
                         </div>
                     </td>
                 </tr>
-            @endforeach
+            @empty
+                <tr><td colspan="5" class="text-center text-muted py-4">Aucun projet enregistré pour le moment.</td></tr>
+            @endforelse
         </tbody>
     </table>
 </div>

@@ -34,5 +34,17 @@ class DatabaseSeeder extends Seeder
         'actif' => true,
     ]
 );
+
+        // Données de démonstration : structures, personnel, découpage
+        // administratif fin et portefeuille de projets réalistes, afin que
+        // le tableau de bord et chaque module (bailleurs, indicateurs,
+        // documents, rapports) présentent des exemples concrets.
+        $this->call([
+            StructureSeeder::class,
+            PersonnelSeeder::class,
+            LocalisationSeeder::class,
+            ProjetDemoSeeder::class,
+            RapportSeeder::class,
+        ]);
     }
 }

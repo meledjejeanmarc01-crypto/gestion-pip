@@ -34,7 +34,7 @@
                 <p class="text-muted mb-0 small">Union – Discipline – Travail</p>
                 <p class="text-muted small">Ministère de l'Économie, du Plan et du Développement</p>
                 <hr>
-                <h2 class="h6 fw-semibold">Système de gestion et de suivi des projets<br>d'investissement public</h2>
+                <h2 class="h6 fw-semibold">SGSPIP<br><span class="fw-normal small">Système de gestion et de suivi des projets d'investissement public</span></h2>
             </div>
 
             <form method="POST" action="{{ route('login') }}">
